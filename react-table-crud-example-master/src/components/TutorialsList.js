@@ -39,7 +39,7 @@ const TutorialsList = (props) => {
   const retrieveTutorials = () => {
     console.log("retrieving tutorials");
     axios
-      .get("https://deshaguna.herokuapp.com/user/user")
+      .get("") //api to get data
 
       .then((response) => {
         setTutorials(response.data.data);
@@ -55,10 +55,12 @@ const TutorialsList = (props) => {
     retrieveTutorials();
   }, []);
 
+  //function for refreshList
   const refreshList = () => {
     retrieveTutorials();
   };
 
+  //serach function
   const findByTitle = (e) => {
     const searchTitle = e.target.value;
     setSearchTitle(searchTitle);
@@ -76,21 +78,25 @@ const TutorialsList = (props) => {
     setEdiId(rowIndex);
     handleShow();
   };
+
+  //funtion to select display array search array and pagination array
   const dataFunc = () => {
     if (searchTitle == "") {
       return currentPosts;
     } else {
       return searchArray;
     }
-    setSearchBool(false);
   };
 
+  //function to delete user
   const deleteUser = (rowIndex) => {
     console.log(rowIndex, "delete check");
     const id = tutorialsRef.current[rowIndex].id;
 
     //delete User axios
   };
+
+  //columns
 
   const columns = useMemo(
     () => [
@@ -104,6 +110,7 @@ const TutorialsList = (props) => {
       },
 
       {
+        //actions
         Header: "Actions",
         accessor: "actions",
         Cell: (props) => {
@@ -129,7 +136,7 @@ const TutorialsList = (props) => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable({
       columns,
-      data: dataFunc(),
+      data: dataFunc(), // array
     });
 
   return (
