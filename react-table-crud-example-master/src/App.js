@@ -14,18 +14,12 @@ function App() {
         <a href="/tutorials" className="navbar-brand">
           Genotechies
         </a>
-        <div className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <Link to={"/tutorials"} className="nav-link">
-              Tutorials
-            </Link>
-          </li>
-        </div>
+        <div className="navbar-nav mr-auto"></div>
       </nav>
 
       <div className="container mt-3">
         <Switch>
-          <Route exact path={["/", "/tutorials"]} component={TutorialsList} />
+          <Route exact path={["/"]} component={TutorialsList} />
         </Switch>
       </div>
     </div>

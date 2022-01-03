@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.4",
     "bootstrap": "^4.6.1",
+    "eslint-plugin-testing-library": "^5.0.1",
     "react": "^17.0.1",
     "react-bootstrap": "^2.0.3",
     "react-dom": "^17.0.1",
@@ -32,8 +33,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {

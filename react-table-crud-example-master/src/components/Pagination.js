@@ -12,12 +12,12 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     <nav>
       <ul className="pagination">
         <li class="page-item">
-          <a class="page-link" aria-label="Previous">
+          {/* <a class="page-link" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
             <span class="sr-only" onClick={pageNumbers - 1}>
               Previous
             </span>
-          </a>
+          </a> */}
         </li>
         {pageNumbers.map((number) => (
           <>
@@ -35,10 +35,10 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
           </>
         ))}
         <li class="page-item">
-          <a class="page-link" aria-label="Next">
+          {/* <a class="page-link" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
             <span class="sr-only">Next</span>
-          </a>
+          </a> */}
         </li>
       </ul>
     </nav>

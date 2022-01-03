@@ -5,6 +5,7 @@ import axios from "axios";
 import { Modal } from "react-bootstrap";
 
 import PaginationCustom from "./Pagination";
+import Data from "../Data";
 
 const TutorialsList = (props) => {
   const [tutorials, setTutorials] = useState([]);
@@ -14,7 +15,7 @@ const TutorialsList = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);
   const [editId, setEdiId] = useState([]);
-  const [finalArray, setFinallArray] = useState([]);
+
   const [searchBool, setSearchBool] = useState(false);
 
   //model edit
@@ -42,8 +43,8 @@ const TutorialsList = (props) => {
       .get("") //api to get data
 
       .then((response) => {
-        setTutorials(response.data.data);
-        setSearchArray(response.data.data);
+        setTutorials(Data); //here we set a json file to show dummy data
+        setSearchArray(Data);
 
         console.log(tutorials);
       })
@@ -65,8 +66,8 @@ const TutorialsList = (props) => {
     const searchTitle = e.target.value;
     setSearchTitle(searchTitle);
 
-    const tutorialsSearch = tutorials.filter((p) =>
-      p.username.includes(searchTitle)
+    const tutorialsSearch = tutorials.filter(
+      (p) => p.username.includes(searchTitle) || p.id.includes(searchTitle)
     );
 
     setSearchArray(tutorialsSearch);
@@ -102,11 +103,11 @@ const TutorialsList = (props) => {
     () => [
       {
         Header: "id",
-        accessor: "username",
+        accessor: "id",
       },
       {
-        Header: "Email",
-        accessor: "email",
+        Header: "Username",
+        accessor: "username",
       },
 
       {
@@ -145,7 +146,7 @@ const TutorialsList = (props) => {
         <Modal.Header closeButton>
           <Modal.Title>Edit Form</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>You can put custon form here</Modal.Body>
       </Modal>
       <div className="col-md-8">
         <div className="col-md-12 ">
