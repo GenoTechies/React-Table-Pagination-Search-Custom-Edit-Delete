@@ -2,8 +2,8 @@
 # React pagination Table example: CRUD App with react-table v7
 
 Build a React pagination Table example with [react-table](https://github.com/tannerlinsley/react-table) v7 by a CRUD Application to consume Web API with Axios, display and modify data with Router & Bootstrap.
-- Each Tutorial has id, title, description, published status.
-- We can create, retrieve, update, delete Tutorials.
+- Each user has id, username.
+- We can retrieve, update, delete Tutorials.
 - List of Tutorials is shown in a Table using `react-table` v7
 - There is a Search bar for finding Tutorials by id and username.
 
