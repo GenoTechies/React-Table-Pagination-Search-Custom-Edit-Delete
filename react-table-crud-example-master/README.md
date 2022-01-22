@@ -1,6 +1,10 @@
 #Genotechies-DataAkamauthu-Deshaguna-SriLanaka
 # React pagination Table example: CRUD App with react-table 
 
+Google doc >>>>>>>>>>>>>>>>>>>>>>>.
+
+https://docs.google.com/document/d/1DpqtyccsueckkAbIzPcjTiPWHgDeSB6FXuibsMQVgus/edit
+
 Build a React pagination Table example with [react-table](https://github.com/tannerlinsley/react-table) v7 by a CRUD Application to consume Web API with Axios, display and modify data with Router & Bootstrap.
 - Each user has id, username.
 - We can retrieve, update, delete Tutorials.
